@@ -23,7 +23,7 @@ jobs:
           channel: stable
           cache: true
       - name: Criar estrutura Android
-        run: flutter create --project-name obracontrol --platforms android .
+        run: flutter create --project-name obracontrol --platforms android . && cp main.dart lib/main.dart
       - name: Baixar dependencias
         run: flutter pub get
       - name: Compilar APK de teste
